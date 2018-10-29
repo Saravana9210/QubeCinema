@@ -1,6 +1,6 @@
 Feature: Testing ShareBox APIs - /api/upload
 
-@ignore
+@watch
 Scenario Outline: Uploading a new file to ShareBox - POST - Positive TCs - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	
@@ -16,7 +16,7 @@ Scenario Outline: Uploading a new file to ShareBox - POST - Positive TCs - <Titl
 		|with duplicate hash,  different name|name|File12|size|23658|hash|fds%67U8|200||
 		|with duplicate name, duplicate hash|name|File1|size|145|hash|fds%67U8|200||
 		
-@ignore
+@watch
 Scenario Outline: Uploading a new file to ShareBox - POST - Negative TCs - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	
@@ -31,7 +31,7 @@ Scenario Outline: Uploading a new file to ShareBox - POST - Negative TCs - <Titl
 		|with invalid token|8920-84ab-48aa-841d-b54f776f06|name|File3|size|16000|hash|fds%67U10|401|UNAUTHORIZED|
 		|with expired token|8920f869-84ab-48aa-841d-b54f776f0ad6|name|File4|size|5268|hash|fds%67U11|401|UNAUTHORIZED|
 		
-@ignore
+@watch
 Scenario Outline: Uploading a new file to ShareBox - POST - Missing field values - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	
@@ -50,7 +50,7 @@ Scenario Outline: Uploading a new file to ShareBox - POST - Missing field values
 		|without hash field|name|File10|size|195896|hash1||400|BAD REQUEST|
 		
 
-@ignore
+@watch
 Scenario Outline: Get upload details of a file using fileId - GET - Positive TCs - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API"
 	
@@ -66,7 +66,7 @@ Scenario Outline: Get upload details of a file using fileId - GET - Positive TCs
 	|Happy Path|bb6a5208-30b1-4dbf-9105-056e0de17f15|200|Completed|QUBE Cinema|agtb675Tgth|2018-10-26 13:42:48|850|850|
 	|Valid file|5f719553-49a7-4f4e-9239-af0af1af014c|200|Pending|saravana|avbgt56T|2018-10-27 11:11:57|0|80|
 	
-@ignore
+@watch
 Scenario Outline: Get upload details of a file using fileId - GET - Negative TCs - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API"
 	
@@ -81,7 +81,7 @@ Scenario Outline: Get upload details of a file using fileId - GET - Negative TCs
 	|Missing fileId value|fileId||400|BAD REQUEST|
 	|Missing fileId param|fileID||400|BAD_REQUEST|
 	
-@ignore	
+@watch	
 Scenario Outline: Get upload details of a file using fileId - GET - Negative TCs - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API"
 	
@@ -96,7 +96,7 @@ Scenario Outline: Get upload details of a file using fileId - GET - Negative TCs
 	|Expired token|1a0c3e02-69fb-4064-8c07-496cc199987f|1a0c3e02-69fb-4064-8c07-496cc199987f|401|UNAUTHORIZED|
 	
 
-@ignore
+@watch
 Scenario Outline: Updating upload details of a file - PUT - Positive TCs - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	
@@ -113,7 +113,7 @@ Scenario Outline: Updating upload details of a file - PUT - Positive TCs - <Titl
 		|bytesCompleted as negative integer|fileId|e5d8e850-c872-41b9-af2d-a009ecf36724|bytesCompleted|-128|400|message|BAD REQUEST|
 		|bytesCompleted value > file size|fileId|e5d8e850-c872-41b9-af2d-a009ecf36724|bytesCompleted|320|400|error|is greater than file size|
 		
-@ignore
+@watch
 Scenario Outline: Updating upload details of a file - PUT - Negative TCs - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	
@@ -130,7 +130,7 @@ Scenario Outline: Updating upload details of a file - PUT - Negative TCs - <Titl
 		|without fileId value|fileId||bytesCompleted|180|500|INTERNAL SERVER ERROR|
 		|without bytesCompleted value|fileId|e5d8e850-c872-41b9-af2d-a009ecf36724|bytesCompleted||500|INTERNAL SERVER ERROR|
 		
-@ignore
+@watch
 Scenario Outline: Updating upload details of a file - PUT - Negative TCs - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	
@@ -144,7 +144,7 @@ Scenario Outline: Updating upload details of a file - PUT - Negative TCs - <Titl
 		|without fileId field|fileId1|e5d8e850-c872-41b9-af2d-a009ecf36724|bytesCompleted|300|400|BAD REQUEST|
 		|without bytesCompleted field|fileId|e5d8e850-c872-41b9-af2d-a009ecf36724|bytesCompleted1|240|400|BAD REQUEST|		
 		
-@ignore
+@watch
 Scenario Outline: Updating upload details of a file - PUT - Negative TCs - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->UPLOAD_API" 
 	

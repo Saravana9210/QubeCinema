@@ -1,6 +1,6 @@
 Feature: Testing ShareBox APIs - /api/files
 
-@ignore
+@watch
 Scenario Outline: Share a file to another user - POST - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API"
 	
@@ -17,7 +17,7 @@ Scenario Outline: Share a file to another user - POST - <Title>
 		|valid fileId & invalid userId|fileId|bb6a5208-30b1-4dbf-9105-056e0de17f15|shareTo|1987654|||400|error|invalid user id|
 		|valid fileId & missing userId|fileId|bb6a5208-30b1-4dbf-9105-056e0de17f15|shareTo||||400|error|missing user id|
 		
-@ignore
+@watch
 Scenario Outline: Share a file to another user - POST - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API"
 	
@@ -32,7 +32,7 @@ Scenario Outline: Share a file to another user - POST - <Title>
 		|expired token|1a0c3e02-69fb-4064-8c07-496cc199987f|fileId|bb6a5208-30b1-4dbf-9105-056e0de17f|shareTo|50|||401|UNAUTHORIZED|
 
 
-@ignore
+@watch
 Scenario Outline: Accept/Reject a file - PUT - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API"
 	
@@ -50,7 +50,7 @@ Scenario Outline: Accept/Reject a file - PUT - <Title>
 		|valid fileId & no action|fileId|bb6a5208-30b1-4dbf-9105-056e0de17f15|isAccepted||400|error|action required|
 		|valid fileId & no action|fileId|bb6a5208-30b1-4dbf-9105-056e0de17f15|isAccepted||400|error|action required|
 		
-@ignore
+@watch
 Scenario Outline: Accept/Reject a file - PUT - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API"
 	
@@ -66,7 +66,7 @@ Scenario Outline: Accept/Reject a file - PUT - <Title>
 		|missing token||fileId|bb6a5208-30b1-4dbf-9105-056e0de17f15|isAccepted|true|401|UNAUTHORIZED|
 		
 		
-@ignore
+@watch
 Scenario Outline: Get list of files - GET - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API" 
 	
@@ -83,7 +83,7 @@ Scenario Outline: Get list of files - GET - <Title>
 		|Happy path|getSharedFiles||200|15|
 		|missing getSharedFiles value|getSharedFiles||200|15|
 				
-@ignore
+@watch
 Scenario Outline: Get list of files - GET - <Title> 
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API" 
 	
@@ -100,7 +100,7 @@ Scenario Outline: Get list of files - GET - <Title>
 		|getSharedFiles with unshared file|getSharedFiles|sarva|200|0|
 		
 
-@ignore		
+@watch		
 Scenario Outline: Delete a file - DELETE - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API"
 	
@@ -116,7 +116,7 @@ Scenario Outline: Delete a file - DELETE - <Title>
 		|missing file id|fileId||400|error|File deleted successfully|
 		|deleted file id|fileId|21608921-7106-480e-bd3e-c5a882fd3bac|400|message|file already deleted|
 
-@ignore
+@watch
 Scenario Outline: Delete a file - DELETE - <Title>
 	Given I set endpoint to "data.props->BASE_URI" with "data.props->FILES_API"
 	
