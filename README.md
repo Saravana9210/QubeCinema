@@ -23,7 +23,7 @@ This framework comprises of 3 main packages:
 **Steps to run the tests:**
   1. Import the project into Eclipse of any comfortable IDE
   2. Update */src/test/resources/data/data.props* with *USER1_TOKEN* and *USER2_TOKEN* (tokens of 2 different users)
-  3. Run the Cucumber runner class as JUnit test
+  3. Run the Cucumber runner class /src/test/java/APITestRunner.java as JUnit test
   4. HTML reports will be pushed to /target folder after the completion of test execution
   5. Open *index.html* to check the test exection results
   
