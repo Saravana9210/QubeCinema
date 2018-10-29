@@ -1,0 +1,660 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Upload a file and check the status and the file list",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;upload-a-file-and-check-the-status-and-the-file-list",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I upload a file with payload \"uploadFile\" and save fileId to \"results.props-\u003ecommonFileID\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I check the status of the file with id \"results.props-\u003ecommonFileID\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "I verify the \"$.status\u003dPending\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "I verify the \"$.bytesCompleted\u003d0\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Upload a file with partial bytesCompleted (1)",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;upload-a-file-with-partial-bytescompleted-(1)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "I upload a file with payload \"uploadPartialFile1\" and save fileId to \"results.props-\u003epartialFile1ID\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "I check the status of the file with id \"results.props-\u003epartialFile1ID\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "I verify the \"$.status\u003dPending\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Upload a file with partial bytesCompleted (2)",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;upload-a-file-with-partial-bytescompleted-(2)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "I upload a file with payload \"uploadPartialFile2\" and save fileId to \"results.props-\u003epartialFile2ID\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "I check the status of the file with id \"results.props-\u003epartialFile2ID\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 20,
+            "name": "I verify the \"$.status\u003dPending\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Update the upload status to partial and check the status of the file",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;update-the-upload-status-to-partial-and-check-the-status-of-the-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "I update the bytesCompleted of file with id \"results.props-\u003ecommonFileID\" as \"$.size-30\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "I check the status of the file with id \"results.props-\u003ecommonFileID\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "I verify the \"$.status\u003dPending\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "I verify the \"$.bytesCompleted\u003d$.size-30\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "Update the upload status to 100% and check the status of the file",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;update-the-upload-status-to-100%-and-check-the-status-of-the-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 31,
+            "name": "I update the bytesCompleted of file with id \"results.props-\u003ecommonFileID\" as \"$.size\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 32,
+            "name": "I check the status of the file with id \"results.props-\u003ecommonFileID\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 33,
+            "name": "I verify the \"$.status\u003dCompleted\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 34,
+            "name": "I verify the \"$.bytesCompleted\u003d$.size\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 29,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 37,
+        "name": "Share a file to another existing user",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;share-a-file-to-another-existing-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 38,
+            "name": "I share the file with id \"results.props-\u003esharedFileID\" to user with id \"results.props-\u003euser2.Id\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and save response to \"results-\u003euser2.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 40,
+            "name": "I verify \"results-\u003euser2.fileList\" to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 36,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 43,
+        "name": "Share a file which is partially uploaded",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;share-a-file-which-is-partially-uploaded",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 44,
+            "name": "I share the file with id \"results.props-\u003epartialFile1ID\" to user with id \"results.props-\u003euser2.Id\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 45,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and save response to \"results-\u003euser2.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 46,
+            "name": "I verify \"results-\u003euser2.fileList\" to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 42,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 49,
+        "name": "Share a file to another non-existing user",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;share-a-file-to-another-non-existing-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 50,
+            "name": "I share the file with id \"results.props-\u003esharedFileID\" to user with id \"results.props-\u003eunknown_user.Id\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 51,
+            "name": "I check the files list of user \"results.props-\u003eunknown_user.Token\" and save response to \"results-\u003eunknown_user.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 52,
+            "name": "I verify the response to contain error \"user doesn\u0027t exist\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 48,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 55,
+        "name": "Accept a file and check the file status and the files list of user1 and user2",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;accept-a-file-and-check-the-file-status-and-the-files-list-of-user1-and-user2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 56,
+            "name": "I accept a file with id \"results.props-\u003esharedFileID\" as \"results.props-\u003euser2.Token\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 57,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and \"getSharedFiles\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "I verify the response to contain \"results.props-\u003esharedFileID\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "results.props-\u003esharedFileID",
+                  "offset": 34
+                }
+              ],
+              "location": "StepDefUtils.i_verify_the_response_to_contain(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 59,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and save response to \"results-\u003euser2.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 60,
+            "name": "I verify \"results-\u003euser2.fileList\" to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 54,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 63,
+        "name": "Reject a file and check the file status and the files list of user1 and user2",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;reject-a-file-and-check-the-file-status-and-the-files-list-of-user1-and-user2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 64,
+            "name": "I reject a file with id \"results.props-\u003esharedFileID\" as \"results.props-\u003euser2.Token\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 65,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and \"getSharedFiles\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 66,
+            "name": "I verify the response NOT to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 67,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and save response to \"results-\u003euser2.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 68,
+            "name": "I verify \"results-\u003euser2.fileList\" to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 62,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 71,
+        "name": "Delete a file which is pending acceptance and try accepting the file",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;delete-a-file-which-is-pending-acceptance-and-try-accepting-the-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 72,
+            "name": "I delete a file with id \"results.props-\u003epartialFile1ID\" as \"results.props-\u003euser1.Token\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 73,
+            "name": "I accept a file with id \"results.props-\u003epartialFile1ID\" as \"results.props-\u003euser2.Token\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 74,
+            "name": "I verify the response to contain error \"file deleted\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 70,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 77,
+        "name": "Delete a file which is pending acceptance and try rejecting the file",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;delete-a-file-which-is-pending-acceptance-and-try-rejecting-the-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 78,
+            "name": "I delete a file with id \"results.props-\u003epartialFile2ID\" as \"results.props-\u003euser1.Token\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 79,
+            "name": "I reject a file with id \"results.props-\u003epartialFile2ID\" as \"results.props-\u003euser2.Token\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 80,
+            "name": "I verify the response to contain error \"file deleted\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 76,
+            "name": "@watch"
+          }
+        ]
+      },
+      {
+        "line": 83,
+        "name": "Delete a shared file as user2 shared by user1",
+        "description": "",
+        "id": "usecase-based-tests-for-/files-and-/upload-apis;delete-a-shared-file-as-user2-shared-by-user1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 84,
+            "name": "I delete a file with id \"results.props-\u003esharedFileID\" as \"results.props-\u003euser2.Token\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 85,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and save response to \"results-\u003euser2.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 86,
+            "name": "I verify \"results-\u003euser2.fileList\" NOT to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 87,
+            "name": "I check the files list of user \"results.props-\u003euser2.Token\" and save response to \"results-\u003euser2.fileList\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 88,
+            "name": "I verify \"results-\u003euser2.fileList\" to contain \"results.props-\u003esharedFileID\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 82,
+            "name": "@watch"
+          }
+        ]
+      }
+    ],
+    "name": "Usecase based tests for /files and /upload APIs",
+    "description": "",
+    "id": "usecase-based-tests-for-/files-and-/upload-apis",
+    "keyword": "Feature",
+    "uri": "APIScenarioTests.feature"
+  }
+]
