@@ -28,6 +28,15 @@ This framework comprises of 3 main packages:
   5. Open *index.html* to check the test exection results
   
   
+  
+ **Frameworks used:**
+ 
+    1. Rest Assured
+    2. Cucumber Java
+    3. JUnit
+    4. Jayway JsonPath
+  
+  
  
 **ToDo:**
   1. Implementation of Scenario based testing
