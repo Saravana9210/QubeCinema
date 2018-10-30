@@ -1,5 +1,5 @@
 BASE_URI=https://ec2-13-127-159-5.ap-south-1.compute.amazonaws.com/sharebox/api
 FILES_API=/files
 UPLOAD_API=/upload
-USER1_TOKEN=e72c868e-95f9-44af-a92a-1fd5cc61bdf0
-USER2_TOKEN=e72c868e-95f9-44af-a92a-1fd5cc61bdf0
+USER1_TOKEN=ad7ee57a-963c-42e8-ab73-11235f2e2e2a
+USER2_TOKEN=ad7ee57a-963c-42e8-ab73-11235f2e2e2a
