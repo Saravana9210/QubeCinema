@@ -93,10 +93,6 @@ public class StepDefCore {
 		Set<Map.Entry<String, String>> mapSet = fileFormData.entrySet();
         Map.Entry<String, String> field1 = (Map.Entry<String, String>) mapSet.toArray()[0];
         Map.Entry<String, String> field2 = (Map.Entry<String, String>) mapSet.toArray()[1];        
-//        String fileIdField = fileId.getKey();
-//        String fileIdValue = fileId.getValue();
-//        String bytesField = bytesCompleted.getKey();
-//        String bytesValue = bytesCompleted.getValue();
         
 		response = given().relaxedHTTPSValidation().
 						contentType("multipart/form-data").
