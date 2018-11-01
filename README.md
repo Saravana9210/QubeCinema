@@ -39,8 +39,7 @@ This framework comprises of 3 main packages:
   
  
 **ToDo:**
-  1. Implementation of Scenario based testing
-  2. Cleanup activities (remove unused imports and variables, adding comments and info, author info, etc)
-  3. logging
+  1. Cleanup activities (remove unused imports and variables, adding comments and info, author info, etc)
+  2. logging
   
     
